@@ -1,0 +1,20 @@
+minimum_cumulusci_version: '3.8.0'
+project:
+    name: binary
+    package:
+        name:  binary
+        namespace: clock
+        api_version: '48.0'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/binary/tests
+            options:
+                outputdir: robot/binary/results
+
+    robot_testdoc:
+        options:
+            path: robot/binary/tests
+            output: robot/binary/doc/binary_tests.html
